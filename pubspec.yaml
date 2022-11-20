@@ -68,6 +68,9 @@ flutter:
     - assets/image/citranet.png
     - assets/image/background.png
     - assets/image/kotak.png
+    - assets/image/iklan/1.png
+    - assets/image/iklan/2.png
+    - assets/image/iklan/3.png
 
 
   # To add assets to your application, add an assets section, like this:

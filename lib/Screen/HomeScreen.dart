@@ -4,7 +4,7 @@ import 'dart:convert';
 import '../Model/Iklan.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:page_transition/page_transition.dart';
-
+import 'LogoutScreen.dart';
 import 'dart:async';
 import 'dart:math';
 
@@ -35,7 +35,15 @@ class _HomeScreenState extends State<HomeScreen> {
       _selectedIndex = index;
       if (index == 0) {
       } else if (index == 1) {
-      } else if (index == 2) {}
+      } else if (index == 2) {
+        Navigator.push(
+            context,
+            PageTransition(
+                type: PageTransitionType.fade,
+                child: LogoutScreen(
+                  variabel: dataUser,
+                )));
+      }
     });
   }
 
@@ -81,7 +89,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 Padding(
                   padding: EdgeInsets.only(top: 100, left: 15, right: 20),
                   child: Text(
-                    'Pelanggan ID : ' + dataUser.pelangganid.toString(),
+                    'No. Pelanggan ID : ' + dataUser.pelangganid.toString(),
                     style: TextStyle(color: Colors.white, fontSize: 15),
                   ),
                 ),
@@ -137,7 +145,7 @@ class _HomeScreenState extends State<HomeScreen> {
               label: "Home"),
           BottomNavigationBarItem(
               icon: Icon(Icons.announcement), label: "Aduan"),
-          BottomNavigationBarItem(icon: Icon(Icons.person), label: "Profil"),
+          BottomNavigationBarItem(icon: Icon(Icons.person), label: "Profile"),
         ],
         currentIndex: _selectedIndex,
         onTap: _onItemTap,

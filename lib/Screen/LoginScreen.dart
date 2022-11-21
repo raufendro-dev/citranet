@@ -74,8 +74,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                 hintText: 'Username')),
                         width: 283,
                         height: 50,
-                        decoration: const BoxDecoration(
-                            color: Color.fromARGB(220, 220, 220, 220))),
+                        decoration: BoxDecoration(border: Border.all())),
                   )),
                 ],
               ),
@@ -88,13 +87,13 @@ class _LoginScreenState extends State<LoginScreen> {
                       padding: const EdgeInsets.all(5.0),
                       child: TextField(
                           textAlign: TextAlign.center,
+                          obscureText: true,
                           controller: password,
                           decoration: const InputDecoration(
                               border: InputBorder.none, hintText: 'Password')),
                       width: 283,
                       height: 50,
-                      decoration: const BoxDecoration(
-                          color: Color.fromARGB(220, 220, 220, 220))),
+                      decoration: BoxDecoration(border: Border.all())),
                 )),
               ],
             ),

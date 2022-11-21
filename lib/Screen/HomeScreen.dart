@@ -1,7 +1,7 @@
 import 'package:citranet/Controller/APIController.dart';
 import 'package:flutter/material.dart';
 import 'dart:convert';
-
+import '../Model/Iklan.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:page_transition/page_transition.dart';
 
@@ -19,8 +19,17 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   _HomeScreenState({required this.dataUser});
   final pageviewcontroller = PageController();
+  var gambarterpilih = 0;
   var dataUser;
   int _selectedIndex = 0;
+  List<Tampiliklan> tampiliklanList = [
+    Tampiliklan(1, 'iklan 1',
+        'https://raw.githubusercontent.com/raufendro-dev/citranet/master/assets/image/iklan/0.png'),
+    Tampiliklan(2, 'iklan 2',
+        'https://raw.githubusercontent.com/raufendro-dev/citranet/master/assets/image/iklan/1.png'),
+    Tampiliklan(3, 'iklan 3',
+        'https://raw.githubusercontent.com/raufendro-dev/citranet/master/assets/image/iklan/2.png')
+  ];
   void _onItemTap(int index) {
     setState(() {
       _selectedIndex = index;
@@ -78,6 +87,43 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ],
             ),
+            Padding(
+              padding: EdgeInsets.only(top: 20),
+              child: Container(
+                margin: const EdgeInsets.symmetric(horizontal: 16.0),
+                height: 160,
+                child: PageView.builder(
+                    onPageChanged: (index) {
+                      setState(() {
+                        gambarterpilih = index;
+                      });
+                    },
+                    itemCount: tampiliklanList.length,
+                    itemBuilder: (context, index) {
+                      return Container(
+                        margin: const EdgeInsets.symmetric(horizontal: 16.0),
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(22),
+                            image: DecorationImage(
+                              image: NetworkImage(tampiliklanList[index].link),
+                              fit: BoxFit.cover,
+                            )),
+                      );
+                    }),
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.only(top: 8),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  ...List.generate(
+                      tampiliklanList.length,
+                      ((index) => Indicator(
+                          isActive: gambarterpilih == index ? true : false)))
+                ],
+              ),
+            )
           ],
         ),
       ),
@@ -91,12 +137,26 @@ class _HomeScreenState extends State<HomeScreen> {
               label: "Home"),
           BottomNavigationBarItem(
               icon: Icon(Icons.announcement), label: "Aduan"),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.person), label: "Rumah Sakit"),
+          BottomNavigationBarItem(icon: Icon(Icons.person), label: "Profil"),
         ],
         currentIndex: _selectedIndex,
         onTap: _onItemTap,
       ),
+    );
+  }
+}
+
+class Indicator extends StatelessWidget {
+  final bool isActive;
+  const Indicator({Key, key, required this.isActive}) : super(key: key);
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: 8.0,
+      width: isActive ? 22.0 : 8.0,
+      decoration: BoxDecoration(
+          color: isActive ? Colors.red : Colors.grey,
+          borderRadius: BorderRadius.circular(8.0)),
     );
   }
 }

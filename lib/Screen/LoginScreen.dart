@@ -71,7 +71,7 @@ class _LoginScreenState extends State<LoginScreen> {
                             controller: username,
                             decoration: const InputDecoration(
                                 border: InputBorder.none,
-                                hintText: 'Username')),
+                                hintText: 'ID Pengguna')),
                         width: 283,
                         height: 50,
                         decoration: BoxDecoration(border: Border.all())),
@@ -90,7 +90,8 @@ class _LoginScreenState extends State<LoginScreen> {
                           obscureText: true,
                           controller: password,
                           decoration: const InputDecoration(
-                              border: InputBorder.none, hintText: 'Password')),
+                              border: InputBorder.none,
+                              hintText: 'Kata Sandi')),
                       width: 283,
                       height: 50,
                       decoration: BoxDecoration(border: Border.all())),
@@ -98,9 +99,9 @@ class _LoginScreenState extends State<LoginScreen> {
               ],
             ),
             Padding(
-              padding: EdgeInsets.only(top: 20),
+              padding: EdgeInsets.only(top: 35),
               child: SizedBox(
-                width: 200,
+                width: 150,
                 height: 40,
                 child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
@@ -130,7 +131,11 @@ class _LoginScreenState extends State<LoginScreen> {
                         );
                       }
                     },
-                    child: Text("Login")),
+                    child: Text(
+                      "Masuk",
+                      style:
+                          TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+                    )),
               ),
             )
           ],

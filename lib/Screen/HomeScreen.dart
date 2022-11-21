@@ -78,38 +78,6 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ],
             ),
-            Padding(
-              padding: EdgeInsets.only(top: 20, left: 10, right: 10),
-              child: SizedBox(
-                height: 150,
-                child: ListView(
-                  scrollDirection: Axis.horizontal,
-                  children: [
-                    Padding(
-                      padding: EdgeInsets.only(left: 10, right: 10),
-                      child: Container(
-                        width: 400,
-                        child: Image.asset('assets/image/iklan/1.png'),
-                      ),
-                    ),
-                    Padding(
-                      padding: EdgeInsets.only(left: 10, right: 10),
-                      child: Container(
-                        width: 400,
-                        child: Image.asset('assets/image/iklan/2.png'),
-                      ),
-                    ),
-                    Padding(
-                      padding: EdgeInsets.only(left: 10, right: 10),
-                      child: Container(
-                        width: 400,
-                        child: Image.asset('assets/image/iklan/3.png'),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            )
           ],
         ),
       ),

@@ -132,6 +132,32 @@ class _LogoutScreenState extends State<LogoutScreen> {
                 ),
               )
             ],
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Padding(
+                padding: EdgeInsets.only(left: 10, top: 10),
+                child: TextButton.icon(
+                    onPressed: () {},
+                    icon: Icon(
+                      Icons.info,
+                      color: Colors.black,
+                    ),
+                    label: Text(
+                      'Tentang Kami',
+                      style: TextStyle(color: Colors.black),
+                    )),
+              ),
+              Padding(
+                padding: EdgeInsets.only(left: 10, top: 10, right: 12),
+                child: Icon(
+                  Icons.arrow_forward_ios,
+                  color: Colors.black,
+                  size: 15,
+                ),
+              )
+            ],
           )
         ],
       ),

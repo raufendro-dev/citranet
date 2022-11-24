@@ -13,6 +13,7 @@ class Usersimpan {
   var password;
   var pelangganid;
   var gambar;
+  var alamat;
   var status;
 
   Usersimpan(
@@ -22,6 +23,7 @@ class Usersimpan {
       this.password,
       this.pelangganid,
       this.gambar,
+      this.alamat,
       this.status});
 
   // Convert a Toko into a Map. The keys must correspond to the names of the
@@ -34,6 +36,7 @@ class Usersimpan {
         password: json["password"],
         pelangganid: json["pelangganid"],
         gambar: json["gambar"],
+        alamat: json["alamat"],
         status: json["status"],
       );
   Map<String, dynamic> toJson() => {
@@ -43,6 +46,7 @@ class Usersimpan {
         "password": password,
         "pelangganid": pelangganid,
         "gambar": gambar,
+        "alamat": alamat,
         "status": status
       };
 

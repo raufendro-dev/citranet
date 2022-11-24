@@ -50,7 +50,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
+      body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
@@ -87,12 +87,33 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsets.only(top: 100, left: 15, right: 20),
+                  padding: EdgeInsets.only(top: 140, left: 15, right: 20),
                   child: Text(
                     'No. Pelanggan ID : ' + dataUser.pelangganid.toString(),
                     style: TextStyle(color: Colors.white, fontSize: 15),
                   ),
                 ),
+                Padding(
+                  padding: EdgeInsets.only(top: 160, left: 15, right: 20),
+                  child: Text(
+                    'Alamat : ' + dataUser.alamat.toString(),
+                    style: TextStyle(color: Colors.white, fontSize: 15),
+                  ),
+                ),
+              ],
+            ),
+            Row(
+              children: [
+                Padding(
+                  padding: EdgeInsets.only(left: 10, top: 10),
+                  child: Text(
+                    'Promo Terbaru',
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black,
+                        fontSize: 15),
+                  ),
+                )
               ],
             ),
             Padding(
@@ -129,6 +150,107 @@ class _HomeScreenState extends State<HomeScreen> {
                       tampiliklanList.length,
                       ((index) => Indicator(
                           isActive: gambarterpilih == index ? true : false)))
+                ],
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.only(left: 35, top: 20, right: 35),
+              child: Row(
+                children: [
+                  Container(
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(20.0),
+                        ),
+                        color: Color(0xffA70000)),
+                    width: 100,
+                    height: 100,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        TextButton(
+                            onPressed: () {},
+                            child: Column(
+                              children: [
+                                Icon(
+                                  Icons.speed,
+                                  color: Colors.white,
+                                ),
+                                Text(
+                                  'Internet',
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.bold),
+                                )
+                              ],
+                            ))
+                      ],
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(left: 10),
+                    child: Container(
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.all(
+                            Radius.circular(20.0),
+                          ),
+                          color: Color(0xffA70000)),
+                      width: 100,
+                      height: 100,
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(left: 10),
+                    child: Container(
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.all(
+                            Radius.circular(20.0),
+                          ),
+                          color: Color(0xffA70000)),
+                      width: 100,
+                      height: 100,
+                    ),
+                  )
+                ],
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.only(left: 35, top: 10, right: 35),
+              child: Row(
+                children: [
+                  Container(
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(20.0),
+                        ),
+                        color: Color(0xffA70000)),
+                    width: 100,
+                    height: 100,
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(left: 10),
+                    child: Container(
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.all(
+                            Radius.circular(20.0),
+                          ),
+                          color: Color(0xffA70000)),
+                      width: 100,
+                      height: 100,
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(left: 10),
+                    child: Container(
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.all(
+                            Radius.circular(20.0),
+                          ),
+                          color: Color(0xffA70000)),
+                      width: 100,
+                      height: 100,
+                    ),
+                  )
                 ],
               ),
             )

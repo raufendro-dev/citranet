@@ -23,6 +23,7 @@ class API {
             password: responsedata[0]['password'],
             pelangganid: responsedata[0]['pelangganid'],
             gambar: responsedata[0]['gambar'].toString().replaceAll('\/', '/'),
+            alamat: responsedata[0]['alamat'],
             status: responsedata[0]['status']);
         SharedPreferences prefs = await SharedPreferences.getInstance();
         prefs.setString('user', hasil.username);

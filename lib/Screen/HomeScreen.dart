@@ -197,6 +197,27 @@ class _HomeScreenState extends State<HomeScreen> {
                           color: Color(0xffA70000)),
                       width: 100,
                       height: 100,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          TextButton(
+                              onPressed: () {},
+                              child: Column(
+                                children: [
+                                  Icon(
+                                    Icons.support_agent,
+                                    color: Colors.white,
+                                  ),
+                                  Text(
+                                    'Support',
+                                    style: TextStyle(
+                                        color: Colors.white,
+                                        fontWeight: FontWeight.bold),
+                                  )
+                                ],
+                              ))
+                        ],
+                      ),
                     ),
                   ),
                   Padding(
@@ -209,6 +230,27 @@ class _HomeScreenState extends State<HomeScreen> {
                           color: Color(0xffA70000)),
                       width: 100,
                       height: 100,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          TextButton(
+                              onPressed: () {},
+                              child: Column(
+                                children: [
+                                  Icon(
+                                    Icons.chat_bubble,
+                                    color: Colors.white,
+                                  ),
+                                  Text(
+                                    'Chat Support',
+                                    style: TextStyle(
+                                        color: Colors.white,
+                                        fontWeight: FontWeight.bold),
+                                  )
+                                ],
+                              ))
+                        ],
+                      ),
                     ),
                   )
                 ],
@@ -226,17 +268,26 @@ class _HomeScreenState extends State<HomeScreen> {
                         color: Color(0xffA70000)),
                     width: 100,
                     height: 100,
-                  ),
-                  Padding(
-                    padding: EdgeInsets.only(left: 10),
-                    child: Container(
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.all(
-                            Radius.circular(20.0),
-                          ),
-                          color: Color(0xffA70000)),
-                      width: 100,
-                      height: 100,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        TextButton(
+                            onPressed: () {},
+                            child: Column(
+                              children: [
+                                Icon(
+                                  Icons.info,
+                                  color: Colors.white,
+                                ),
+                                Text(
+                                  'Menu',
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.bold),
+                                )
+                              ],
+                            ))
+                      ],
                     ),
                   ),
                   Padding(
@@ -249,6 +300,60 @@ class _HomeScreenState extends State<HomeScreen> {
                           color: Color(0xffA70000)),
                       width: 100,
                       height: 100,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          TextButton(
+                              onPressed: () {},
+                              child: Column(
+                                children: [
+                                  Icon(
+                                    Icons.info,
+                                    color: Colors.white,
+                                  ),
+                                  Text(
+                                    'Menu',
+                                    style: TextStyle(
+                                        color: Colors.white,
+                                        fontWeight: FontWeight.bold),
+                                  )
+                                ],
+                              ))
+                        ],
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(left: 10),
+                    child: Container(
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.all(
+                            Radius.circular(20.0),
+                          ),
+                          color: Color(0xffA70000)),
+                      width: 100,
+                      height: 100,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          TextButton(
+                              onPressed: () {},
+                              child: Column(
+                                children: [
+                                  Icon(
+                                    Icons.info,
+                                    color: Colors.white,
+                                  ),
+                                  Text(
+                                    'Menu',
+                                    style: TextStyle(
+                                        color: Colors.white,
+                                        fontWeight: FontWeight.bold),
+                                  )
+                                ],
+                              ))
+                        ],
+                      ),
                     ),
                   )
                 ],

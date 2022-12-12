@@ -70,15 +70,16 @@ class _HomeScreenState extends State<HomeScreen> {
                       Text(
                         'Halo, ' + dataUser.nama,
                         style: TextStyle(
+                            fontFamily: 'Poppins',
                             fontSize: 18,
                             color: Colors.white,
                             fontWeight: FontWeight.bold),
                       ),
                       Container(
-                        height: 48,
-                        width: 48,
+                        height: 60,
+                        width: 60,
                         child: ClipRRect(
-                            borderRadius: BorderRadius.all(Radius.circular(25)),
+                            borderRadius: BorderRadius.all(Radius.circular(30)),
                             child: Image.memory(
                               base64Decode(dataUser.gambar),
                             )),
@@ -90,14 +91,22 @@ class _HomeScreenState extends State<HomeScreen> {
                   padding: EdgeInsets.only(top: 140, left: 15, right: 20),
                   child: Text(
                     'No. Pelanggan ID : ' + dataUser.pelangganid.toString(),
-                    style: TextStyle(color: Colors.white, fontSize: 15),
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 15,
+                      fontFamily: 'Poppins',
+                    ),
                   ),
                 ),
                 Padding(
                   padding: EdgeInsets.only(top: 160, left: 15, right: 20),
                   child: Text(
                     'Alamat : ' + dataUser.alamat.toString(),
-                    style: TextStyle(color: Colors.white, fontSize: 15),
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 15,
+                      fontFamily: 'Poppins',
+                    ),
                   ),
                 ),
               ],
@@ -109,9 +118,11 @@ class _HomeScreenState extends State<HomeScreen> {
                   child: Text(
                     'Promo Terbaru',
                     style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        color: Colors.black,
-                        fontSize: 15),
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black,
+                      fontSize: 15,
+                      fontFamily: 'Poppins',
+                    ),
                   ),
                 )
               ],
@@ -183,7 +194,8 @@ class _HomeScreenState extends State<HomeScreen> {
                                       'Internet',
                                       style: TextStyle(
                                           color: Colors.white,
-                                          fontWeight: FontWeight.bold),
+                                          fontWeight: FontWeight.bold,
+                                          fontFamily: 'Poppins'),
                                     )
                                   ],
                                 ))
@@ -213,7 +225,8 @@ class _HomeScreenState extends State<HomeScreen> {
                                       'Support',
                                       style: TextStyle(
                                           color: Colors.white,
-                                          fontWeight: FontWeight.bold),
+                                          fontWeight: FontWeight.bold,
+                                          fontFamily: 'Poppins'),
                                     )
                                   ],
                                 ))
@@ -242,8 +255,10 @@ class _HomeScreenState extends State<HomeScreen> {
                                     Text(
                                       'Chat Support',
                                       style: TextStyle(
+                                          fontSize: 12,
                                           color: Colors.white,
-                                          fontWeight: FontWeight.bold),
+                                          fontWeight: FontWeight.bold,
+                                          fontFamily: 'Poppins'),
                                     )
                                   ],
                                 ))
@@ -273,7 +288,8 @@ class _HomeScreenState extends State<HomeScreen> {
                                       'Menu',
                                       style: TextStyle(
                                           color: Colors.white,
-                                          fontWeight: FontWeight.bold),
+                                          fontWeight: FontWeight.bold,
+                                          fontFamily: 'Poppins'),
                                     )
                                   ],
                                 ))
@@ -303,7 +319,8 @@ class _HomeScreenState extends State<HomeScreen> {
                                       'Menu',
                                       style: TextStyle(
                                           color: Colors.white,
-                                          fontWeight: FontWeight.bold),
+                                          fontWeight: FontWeight.bold,
+                                          fontFamily: 'Poppins'),
                                     )
                                   ],
                                 ))
@@ -333,7 +350,8 @@ class _HomeScreenState extends State<HomeScreen> {
                                       'Menu',
                                       style: TextStyle(
                                           color: Colors.white,
-                                          fontWeight: FontWeight.bold),
+                                          fontWeight: FontWeight.bold,
+                                          fontFamily: 'Poppins'),
                                     )
                                   ],
                                 ))
@@ -348,6 +366,8 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
       bottomNavigationBar: BottomNavigationBar(
         selectedItemColor: Colors.red,
+        selectedLabelStyle: TextStyle(fontFamily: 'Poppins'),
+        unselectedLabelStyle: TextStyle(fontFamily: 'Poppins'),
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
               icon: Icon(
@@ -355,7 +375,9 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
               label: "Home"),
           BottomNavigationBarItem(
-              icon: Icon(Icons.announcement), label: "Aduan"),
+            icon: Icon(Icons.announcement),
+            label: "Aduan",
+          ),
           BottomNavigationBarItem(icon: Icon(Icons.person), label: "Profile"),
         ],
         currentIndex: _selectedIndex,

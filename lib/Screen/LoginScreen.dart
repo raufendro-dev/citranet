@@ -1,5 +1,6 @@
 import 'package:citranet/Controller/APIController.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'dart:convert';
 import 'package:loading_animation_widget/loading_animation_widget.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -30,7 +31,12 @@ class _LoginScreenState extends State<LoginScreen> {
               size: 20,
             ),
           ),
-          Container(margin: EdgeInsets.only(left: 7), child: Text("Login")),
+          Container(
+              margin: EdgeInsets.only(left: 7),
+              child: Text(
+                "Login",
+                style: GoogleFonts.poppins(),
+              )),
         ],
       ),
     );
@@ -59,19 +65,21 @@ class _LoginScreenState extends State<LoginScreen> {
           children: <Widget>[
             Image.asset('assets/image/citranet.png'),
             Padding(
-              padding: EdgeInsets.only(top: 30),
+              padding: EdgeInsets.only(top: 20),
               child: Stack(
                 children: [
                   SafeArea(
                       child: Center(
                     child: Container(
-                        padding: const EdgeInsets.all(5.0),
+                        padding: const EdgeInsets.all(2.0),
                         child: TextField(
+                            style: TextStyle(fontFamily: 'Poppins'),
                             textAlign: TextAlign.center,
                             controller: username,
                             decoration: const InputDecoration(
                                 border: InputBorder.none,
-                                hintText: 'ID Pengguna')),
+                                hintText: 'ID Pengguna',
+                                hintStyle: TextStyle(fontFamily: 'Poppins'))),
                         width: 283,
                         height: 50,
                         decoration: BoxDecoration(border: Border.all())),
@@ -84,14 +92,16 @@ class _LoginScreenState extends State<LoginScreen> {
                 SafeArea(
                     child: Center(
                   child: Container(
-                      padding: const EdgeInsets.all(5.0),
+                      padding: const EdgeInsets.all(2.0),
                       child: TextField(
+                          style: TextStyle(fontFamily: 'Poppins'),
                           textAlign: TextAlign.center,
                           obscureText: true,
                           controller: password,
                           decoration: const InputDecoration(
                               border: InputBorder.none,
-                              hintText: 'Kata Sandi')),
+                              hintText: 'Kata Sandi',
+                              hintStyle: TextStyle(fontFamily: 'Poppins'))),
                       width: 283,
                       height: 50,
                       decoration: BoxDecoration(border: Border.all())),
@@ -99,7 +109,7 @@ class _LoginScreenState extends State<LoginScreen> {
               ],
             ),
             Padding(
-              padding: EdgeInsets.only(top: 35),
+              padding: EdgeInsets.only(top: 15),
               child: SizedBox(
                 width: 150,
                 height: 40,
@@ -133,8 +143,10 @@ class _LoginScreenState extends State<LoginScreen> {
                     },
                     child: Text(
                       "Masuk",
-                      style:
-                          TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+                      style: GoogleFonts.poppins().copyWith(
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                      ),
                     )),
               ),
             )

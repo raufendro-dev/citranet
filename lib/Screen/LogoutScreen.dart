@@ -51,7 +51,10 @@ class _LogoutScreenState extends State<LogoutScreen> {
               children: [
                 Text(
                   'Profile',
-                  style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+                  style: TextStyle(
+                      fontSize: 30,
+                      fontWeight: FontWeight.bold,
+                      fontFamily: 'Poppins'),
                 ),
                 Container(
                   height: 100,
@@ -71,7 +74,8 @@ class _LogoutScreenState extends State<LogoutScreen> {
                       ),
                       label: Text(
                         'Keluar',
-                        style: TextStyle(color: Colors.red),
+                        style:
+                            TextStyle(color: Colors.red, fontFamily: 'Poppins'),
                       )),
                 )
               ],
@@ -96,7 +100,10 @@ class _LogoutScreenState extends State<LogoutScreen> {
             child: Center(
                 child: Text(
               dataUser.nama,
-              style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+              style: TextStyle(
+                  fontSize: 22,
+                  fontWeight: FontWeight.bold,
+                  fontFamily: 'Poppins'),
             )),
           ),
           Padding(
@@ -104,7 +111,8 @@ class _LogoutScreenState extends State<LogoutScreen> {
             child: Center(
                 child: Text(
               'Username : ' + dataUser.username,
-              style: TextStyle(fontSize: 15, color: Colors.grey),
+              style: TextStyle(
+                  fontSize: 15, color: Colors.grey, fontFamily: 'Poppins'),
             )),
           ),
           Row(
@@ -120,7 +128,8 @@ class _LogoutScreenState extends State<LogoutScreen> {
                     ),
                     label: Text(
                       'Ubah Password',
-                      style: TextStyle(color: Colors.black),
+                      style:
+                          TextStyle(color: Colors.black, fontFamily: 'Poppins'),
                     )),
               ),
               Padding(
@@ -146,7 +155,8 @@ class _LogoutScreenState extends State<LogoutScreen> {
                     ),
                     label: Text(
                       'Tentang Kami',
-                      style: TextStyle(color: Colors.black),
+                      style:
+                          TextStyle(color: Colors.black, fontFamily: 'Poppins'),
                     )),
               ),
               Padding(

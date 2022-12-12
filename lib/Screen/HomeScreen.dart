@@ -154,211 +154,195 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ),
             Padding(
-              padding: EdgeInsets.only(left: 35, top: 20, right: 35),
-              child: Row(
-                children: [
-                  Container(
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.all(
-                          Radius.circular(20.0),
-                        ),
-                        color: Color(0xffA70000)),
-                    width: 100,
-                    height: 100,
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        TextButton(
-                            onPressed: () {},
-                            child: Column(
-                              children: [
-                                Icon(
-                                  Icons.speed,
-                                  color: Colors.white,
-                                ),
-                                Text(
-                                  'Internet',
-                                  style: TextStyle(
+                padding: EdgeInsets.only(top: 20),
+                child: Center(
+                  child: Wrap(
+                    spacing: 10,
+                    runSpacing: 10,
+                    children: [
+                      Container(
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.all(
+                              Radius.circular(20.0),
+                            ),
+                            color: Color(0xffA70000)),
+                        width: 100,
+                        height: 100,
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            TextButton(
+                                onPressed: () {},
+                                child: Column(
+                                  children: [
+                                    Icon(
+                                      Icons.speed,
                                       color: Colors.white,
-                                      fontWeight: FontWeight.bold),
-                                )
-                              ],
-                            ))
-                      ],
-                    ),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.only(left: 10),
-                    child: Container(
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.all(
-                            Radius.circular(20.0),
-                          ),
-                          color: Color(0xffA70000)),
-                      width: 100,
-                      height: 100,
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          TextButton(
-                              onPressed: () {},
-                              child: Column(
-                                children: [
-                                  Icon(
-                                    Icons.support_agent,
-                                    color: Colors.white,
-                                  ),
-                                  Text(
-                                    'Support',
-                                    style: TextStyle(
-                                        color: Colors.white,
-                                        fontWeight: FontWeight.bold),
-                                  )
-                                ],
-                              ))
-                        ],
-                      ),
-                    ),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.only(left: 10),
-                    child: Container(
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.all(
-                            Radius.circular(20.0),
-                          ),
-                          color: Color(0xffA70000)),
-                      width: 100,
-                      height: 100,
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          TextButton(
-                              onPressed: () {},
-                              child: Column(
-                                children: [
-                                  Icon(
-                                    Icons.chat_bubble,
-                                    color: Colors.white,
-                                  ),
-                                  Text(
-                                    'Chat Support',
-                                    style: TextStyle(
-                                        color: Colors.white,
-                                        fontWeight: FontWeight.bold),
-                                  )
-                                ],
-                              ))
-                        ],
-                      ),
-                    ),
-                  )
-                ],
-              ),
-            ),
-            Padding(
-              padding: EdgeInsets.only(left: 35, top: 10, right: 35),
-              child: Row(
-                children: [
-                  Container(
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.all(
-                          Radius.circular(20.0),
+                                    ),
+                                    Text(
+                                      'Internet',
+                                      style: TextStyle(
+                                          color: Colors.white,
+                                          fontWeight: FontWeight.bold),
+                                    )
+                                  ],
+                                ))
+                          ],
                         ),
-                        color: Color(0xffA70000)),
-                    width: 100,
-                    height: 100,
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        TextButton(
-                            onPressed: () {},
-                            child: Column(
-                              children: [
-                                Icon(
-                                  Icons.info,
-                                  color: Colors.white,
-                                ),
-                                Text(
-                                  'Menu',
-                                  style: TextStyle(
+                      ),
+                      Container(
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.all(
+                              Radius.circular(20.0),
+                            ),
+                            color: Color(0xffA70000)),
+                        width: 100,
+                        height: 100,
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            TextButton(
+                                onPressed: () {},
+                                child: Column(
+                                  children: [
+                                    Icon(
+                                      Icons.support_agent,
                                       color: Colors.white,
-                                      fontWeight: FontWeight.bold),
-                                )
-                              ],
-                            ))
-                      ],
-                    ),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.only(left: 10),
-                    child: Container(
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.all(
-                            Radius.circular(20.0),
-                          ),
-                          color: Color(0xffA70000)),
-                      width: 100,
-                      height: 100,
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          TextButton(
-                              onPressed: () {},
-                              child: Column(
-                                children: [
-                                  Icon(
-                                    Icons.info,
-                                    color: Colors.white,
-                                  ),
-                                  Text(
-                                    'Menu',
-                                    style: TextStyle(
-                                        color: Colors.white,
-                                        fontWeight: FontWeight.bold),
-                                  )
-                                ],
-                              ))
-                        ],
+                                    ),
+                                    Text(
+                                      'Support',
+                                      style: TextStyle(
+                                          color: Colors.white,
+                                          fontWeight: FontWeight.bold),
+                                    )
+                                  ],
+                                ))
+                          ],
+                        ),
                       ),
-                    ),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.only(left: 10),
-                    child: Container(
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.all(
-                            Radius.circular(20.0),
-                          ),
-                          color: Color(0xffA70000)),
-                      width: 100,
-                      height: 100,
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          TextButton(
-                              onPressed: () {},
-                              child: Column(
-                                children: [
-                                  Icon(
-                                    Icons.info,
-                                    color: Colors.white,
-                                  ),
-                                  Text(
-                                    'Menu',
-                                    style: TextStyle(
-                                        color: Colors.white,
-                                        fontWeight: FontWeight.bold),
-                                  )
-                                ],
-                              ))
-                        ],
+                      Container(
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.all(
+                              Radius.circular(20.0),
+                            ),
+                            color: Color(0xffA70000)),
+                        width: 100,
+                        height: 100,
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            TextButton(
+                                onPressed: () {},
+                                child: Column(
+                                  children: [
+                                    Icon(
+                                      Icons.chat_bubble,
+                                      color: Colors.white,
+                                    ),
+                                    Text(
+                                      'Chat Support',
+                                      style: TextStyle(
+                                          color: Colors.white,
+                                          fontWeight: FontWeight.bold),
+                                    )
+                                  ],
+                                ))
+                          ],
+                        ),
                       ),
-                    ),
-                  )
-                ],
-              ),
-            )
+                      Container(
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.all(
+                              Radius.circular(20.0),
+                            ),
+                            color: Color(0xffA70000)),
+                        width: 100,
+                        height: 100,
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            TextButton(
+                                onPressed: () {},
+                                child: Column(
+                                  children: [
+                                    Icon(
+                                      Icons.info,
+                                      color: Colors.white,
+                                    ),
+                                    Text(
+                                      'Menu',
+                                      style: TextStyle(
+                                          color: Colors.white,
+                                          fontWeight: FontWeight.bold),
+                                    )
+                                  ],
+                                ))
+                          ],
+                        ),
+                      ),
+                      Container(
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.all(
+                              Radius.circular(20.0),
+                            ),
+                            color: Color(0xffA70000)),
+                        width: 100,
+                        height: 100,
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            TextButton(
+                                onPressed: () {},
+                                child: Column(
+                                  children: [
+                                    Icon(
+                                      Icons.info,
+                                      color: Colors.white,
+                                    ),
+                                    Text(
+                                      'Menu',
+                                      style: TextStyle(
+                                          color: Colors.white,
+                                          fontWeight: FontWeight.bold),
+                                    )
+                                  ],
+                                ))
+                          ],
+                        ),
+                      ),
+                      Container(
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.all(
+                              Radius.circular(20.0),
+                            ),
+                            color: Color(0xffA70000)),
+                        width: 100,
+                        height: 100,
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            TextButton(
+                                onPressed: () {},
+                                child: Column(
+                                  children: [
+                                    Icon(
+                                      Icons.info,
+                                      color: Colors.white,
+                                    ),
+                                    Text(
+                                      'Menu',
+                                      style: TextStyle(
+                                          color: Colors.white,
+                                          fontWeight: FontWeight.bold),
+                                    )
+                                  ],
+                                ))
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                )),
           ],
         ),
       ),
